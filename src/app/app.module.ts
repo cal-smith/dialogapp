@@ -1,5 +1,5 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import {
   ButtonModule,
@@ -7,11 +7,13 @@ import {
   CheckboxModule,
   AccordionModule,
   PlaceholderModule
-} from "carbon-components-angular";
-import { MyDialogDirective } from "../dialog/my-dialog.directive";
-import { MyDialogComponent } from "../dialog/my-dialog.component";
-import { MyContentsComponent } from "../dialog/my-contents.component";
-import { AppComponent } from "./app.component";
+} from 'carbon-components-angular';
+import { MyDialogDirective } from '../dialog/my-dialog.directive';
+import { MyDialogComponent } from '../dialog/my-dialog.component';
+import { MyContentsComponent } from '../dialog/my-contents.component';
+import { AppComponent } from './app.component';
+
+import { FilterModule } from '@carbon/icons-angular';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AppComponent } from "./app.component";
     DialogModule,
     CheckboxModule,
     AccordionModule,
-    PlaceholderModule
+    PlaceholderModule,
+    FilterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

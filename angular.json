@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dialogapp"
+    }
+  },
+  "defaultProject": "dialogapp",
+  "cli": {
+    "analytics": false
+  }
 }

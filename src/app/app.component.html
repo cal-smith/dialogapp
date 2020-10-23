@@ -1,4 +1,3 @@
-<!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align: center;">
   <h1>Welcome to {{ title }}!</h1>
   <button ibmButton>Hi!</button>
@@ -8,8 +7,8 @@
     type="submit"
     size="field"
     [myDialog]="filterMenu"
-    [placement]="options?.filter?.placement || defaultPlacement"
-    [offset]="options?.filter?.offset || defaultOffset"
+    [placement]="defaultPlacement"
+    [offset]="defaultOffset"
     [appendInline]="false"
     trigger="click"
     closeTrigger="click"

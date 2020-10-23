@@ -15,22 +15,21 @@ import {
   ViewContainerRef,
   Input,
   TemplateRef
-} from "@angular/core";
+} from '@angular/core';
 import {
   DialogService,
   EventService,
   DialogDirective
-} from "carbon-components-angular";
-import { MyDialogComponent } from "./my-dialog.component";
+} from 'carbon-components-angular';
+import { MyDialogComponent } from './my-dialog.component';
 
 @Directive({
-  selector: "[myDialog]",
-  exportAs: "myDialog",
+  selector: '[myDialog]',
+  exportAs: 'myDialog',
   providers: [DialogService]
 })
 export class MyDialogDirective extends DialogDirective {
-  @Input("uihubCoreUiFilter")
-  dialogRef: TemplateRef<any>;
+  @Input() myDialog: TemplateRef<any>;
 
   constructor(
     protected elementRef: ElementRef,
@@ -44,6 +43,6 @@ export class MyDialogDirective extends DialogDirective {
   }
 
   onDialogInit() {
-    this.dialogConfig.content = this.dialogRef;
+    this.dialogConfig.content = this.myDialog;
   }
 }
