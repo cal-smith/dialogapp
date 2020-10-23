@@ -1,0 +1,25 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align: center;">
+  <h1>Welcome to {{ title }}!</h1>
+  <button ibmButton>Hi!</button>
+  <button
+    ibmButton="ghost"
+    class="bx--btn__icon"
+    type="submit"
+    size="field"
+    [myDialog]="filterMenu"
+    [placement]="options?.filter?.placement || defaultPlacement"
+    [offset]="options?.filter?.offset || defaultOffset"
+    [appendInline]="false"
+    trigger="click"
+    closeTrigger="click"
+  >
+    <svg ibmIconFilter size="16"></svg>
+  </button>
+  <ng-template #filterMenu let-dialog="dialog">
+    <my-contents
+      [(filterFields)]="filterFields"
+      [dialog]="dialog"
+    ></my-contents>
+  </ng-template>
+</div>

@@ -1,0 +1,73 @@
+/*
+ *
+ * Licensed Materials - Property of IBM
+ *
+ * Supply Chain - UI Hub
+ * (C) Copyright IBM Corp. 2019, 2020 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ *
+ */
+ @import '~carbon-components/scss/globals/scss/mixins';
+ @import '~carbon-components/scss/globals/scss/vars';
+ 
+ .filter-dialog-title {
+   color: $text-01;
+   @include carbon--type-style('expressive-heading-01');
+ }
+ 
+ .filter-dialog-pane {
+   background-color: $ui-01;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: space-around;
+ }
+ 
+ .filter-dialog-element {
+   margin-top: $spacing-05;
+   margin-left: $spacing-05;
+   margin-right: $spacing-05;
+ }
+ 
+ .filter-dialog-fields-container {
+   margin-top: $spacing-05;
+ }
+ 
+ .filter-dialog-field {
+   justify-content: space-between;
+   display: flex;
+   align-items: center;
+   margin-left: $spacing-05;
+   margin-right: $spacing-05;
+ }
+ 
+ .filter-dialog-caption {
+   @include carbon--type-style('helper-text-01');
+   font-style: italic;
+ }
+ 
+ .filter-dialog-footer {
+   display: flex;
+   margin-top: $spacing-05;
+ }
+ 
+ .footer-item {
+   flex: 1;
+ }
+ 
+ .full-width-accordion {
+   ::ng-deep {
+     .bx--accordion__content {
+       padding-right: 0rem;
+     }
+   }
+ }
+ 
+ .scrollable-content {
+   overflow-y: auto;
+   padding-right: 0px;
+   max-height: 8rem;
+ }
+ 

@@ -1,0 +1,49 @@
+<div class="filter-dialog-pane">
+  <div class="filter-dialog-fields-container">
+    <ibm-accordion>
+      <ibm-accordion-item
+        *ngFor="let field of filterFields"
+        [title]="fieldTitle"
+        class="full-width-accordion"
+        [context]="{ field: field }"
+        [expanded]="field.expanded"
+        (selected)="toggleExpanded($event, field)"
+      >
+        <div class="scrollable-content">
+          <ibm-checkbox
+            *ngFor="let option of field.options"
+            [checked]="option.selected"
+            (checkedChange)="selectionChanged(option, $event)"
+            [disabled]="option.disabled"
+          >
+            {{ option.label }}
+          </ibm-checkbox>
+        </div>
+      </ibm-accordion-item>
+    </ibm-accordion>
+  </div>
+  <div class="filter-dialog-footer">
+    <button
+      class="footer-item"
+      ibmButton="secondary"
+      size="normal"
+      (click)="onClearAll()"
+    >
+      {{ clearButtonLabel }}
+    </button>
+    <button
+      class="footer-item"
+      ibmButton="primary"
+      size="normal"
+      (click)="onApplyFilters()"
+    >
+      {{ applyButtonLabel }}
+    </button>
+  </div>
+</div>
+
+<ng-template #fieldTitle let-field="field">
+  <span class="bx--accordion__title filter-dialog-field">
+    {{ field.label }}
+  </span>
+</ng-template>
